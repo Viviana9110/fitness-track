@@ -6,7 +6,7 @@ import mockApi from "../assets/mockApi";
 const AppContext = createContext(initialState)
 
 export const AppProvider = ({children} : {children: React.ReactNode}) => {
-
+ 
     const navigate = useNavigate()
     const [user, setUser] = useState<User>(null)
     const [isUserFetched, setIsUserFetched] = useState(false)

@@ -6,20 +6,28 @@ import ActivityLog from "./pages/ActivityLog"
 import Profile from "./pages/Profile"
 import { useAppContext } from "./context/AppContext"
 import Login from "./pages/Login"
+import Loading from "./components/ui/Loading"
+import Onboarding from "./pages/Onboarding"
+import { Toaster } from "react-hot-toast"
 
 
 const App = () => {
-  const {user, isUserFetched} = useAppContext()
+  const {user, isUserFetched, onboardingCompleted} = useAppContext()
 
-  if(!user){
-    return isUserFetched ? <Login/> : <p>Loading...</p>
+  if(user){
+    return isUserFetched ? <Login/> : <Loading/>
   }
+
+  if(!onboardingCompleted){
+    return <Onboarding/>
+  }
+
   return (
     <>
+    <Toaster/>
       <Routes>
         <Route path="/" element={<Layout/>} >
           <Route index element={<Dashboard/>} />
-          <Route path="login" element={<Login/>} />
           <Route path="food" element={<FoodLog/>} />
           <Route path="activity" element={<ActivityLog/>} />
           <Route path="profile" element={<Profile/>} />

@@ -12,7 +12,7 @@ export type User = {
     dailyCalorieIntake?: number;
     dailyCalorieBurn?: number;
     createdAt?: string;
-} | null;
+} | null; 
 
 // Credentials
 export type Credentials = {
