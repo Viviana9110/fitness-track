@@ -6,7 +6,7 @@ import ActivityLog from "./pages/ActivityLog"
 import Profile from "./pages/Profile"
 import { useAppContext } from "./context/AppContext"
 import Login from "./pages/Login"
-import Loading from "./components/ui/Loading"
+import Loading from "./components/Loading"
 import Onboarding from "./pages/Onboarding"
 import { Toaster } from "react-hot-toast"
 
@@ -14,7 +14,7 @@ import { Toaster } from "react-hot-toast"
 const App = () => {
   const {user, isUserFetched, onboardingCompleted} = useAppContext()
 
-  if(user){
+  if(!user){
     return isUserFetched ? <Login/> : <Loading/>
   }
 
