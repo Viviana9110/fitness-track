@@ -94,7 +94,7 @@ const FoodLog = () => {
 
         </div>
       </div>
-      <div className="page-context-grid">
+      <div className="page-content-grid">
         {/* Quick Add Section */}
         {!showForm && (
           <div className="space-y-4">
