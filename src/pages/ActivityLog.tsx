@@ -69,7 +69,7 @@ const ActivityLog = () => {
     setFormData({...formData, duration, calories})
   }
 
-  const handleDelete = async (documentId: string) => {
+  const handleDelete = async () => {
 
   }
 
@@ -196,7 +196,7 @@ const ActivityLog = () => {
                       <p className="font-semibold text-slate-700 dark:text-slate-200">{activity.duration} min</p>
                       <p className="text-xs text-slate-400">{activity.calories} kcal</p>
                     </div>
-                    <button onClick={()=>handleDelete(activity.documentId)} className="p-2 text-red-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors">
+                    <button onClick={()=>handleDelete()} className="p-2 text-red-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors">
                       <Trash2Icon className="w-4 h-4"/>
                     </button>
                   </div>
