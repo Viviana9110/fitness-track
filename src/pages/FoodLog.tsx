@@ -21,7 +21,7 @@ const FoodLog = () => {
     calories: 0,
     mealType: ''
   })
-   const [loading, setLoading] = useState(false)
+   const [loading] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null) 
    const today = new Date().toISOString().split('T')[0]
 
