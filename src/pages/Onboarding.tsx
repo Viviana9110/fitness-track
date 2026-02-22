@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, PersonStanding, Scale, ScaleIcon, Target, User } from "lucide-react"
+import { ArrowLeft, ArrowRight, PersonStanding, ScaleIcon, Target, User } from "lucide-react"
 import { useState } from "react"
 import toast, { Toaster } from "react-hot-toast"
 import { useAppContext } from "../context/AppContext"
